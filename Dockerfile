@@ -14,7 +14,6 @@ RUN chmod a+x gradlew
 RUN ./gradlew build
 
 FROM eclipse-temurin:25-jdk
-ARG JAR_FILE=/workspace/build/libs/ci-helloworld-1.0-SNAPSHOT.jar
 COPY --from=build ${JAR_FILE} app.jar
 EXPOSE 6379
 ENTRYPOINT ["java","-jar","app.jar"]
