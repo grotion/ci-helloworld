@@ -53,12 +53,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Check Docker secret presence
-        run: |
-          if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then echo "DOCKER_USERNAME missing"; exit 1; fi
-          if [ -z "${{ secrets.DOCKER_PASSWORD }}" ]; then echo "DOCKER_PASSWORD missing"; exit 1; fi
-          if [ -z "${{ secrets.DOCKER_REPO }}" ]; then echo "DOCKER_REPO missing"; exit 1; fi
-          echo "Docker secrets exist"
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Container image
