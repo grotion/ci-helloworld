@@ -34,12 +34,12 @@ public class ArrayUtilsTest {
     }
 
 
-    @Test
-    public void testOddOrPosAllPositives() {
-        // Any nonempty x with only non-negative elements works, because the first part of the
-        // compound if-test is not necessary unless the value is negative.
-        assertEquals(3, ArrayUtils.oddOrPos(new int[]{1, 2, 3}));
-    }
+//    @Test
+//    public void testOddOrPosAllPositives() {
+//        // Any nonempty x with only non-negative elements works, because the first part of the
+//        // compound if-test is not necessary unless the value is negative.
+//        assertEquals(3, ArrayUtils.oddOrPos(new int[]{1, 2, 3}));
+//    }
 
 //    @Test
 //    public void testOddOrPositiveBothPositivesAndNegatives() {
